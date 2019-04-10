@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">Weather app</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="departure">Departure</string>
+    <string name="destination">Destination</string>
+
+    <string name="dew_point">Dew point: </string>
+    <string name="humidity">Humidity: </string>
+    <string name="temperature">Temperature: </string>
+
+    <string name="high_clouds">High clouds: </string>
+    <string name="medium_clouds">Medium clouds: </string>
+    <string name="low_clouds">Low clouds: </string>
+    <string name="fog">Fog: </string>
+
+    <string name="loading_failed">Data loading failed. Please try again.</string>
+    <string name="incorrect_address">Incorrect address!</string>
+    <string name="incorrect_coordinates">Incorrect coordinates!</string>
+    <string name="no_location">You need to enter the location!</string>
+    <string name="no_coordinates">You need to enter the coordinates!</string>
+
+</resources>

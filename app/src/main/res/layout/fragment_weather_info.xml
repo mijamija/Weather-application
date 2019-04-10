@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".WeatherInfoFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            android:layout_weight="0.25"
+            android:padding="10dp"
+            android:gravity="center">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@drawable/background_rounded"
+                android:padding="8dp">
+
+                <EditText android:id="@+id/etEnterLocation"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:hint="Enter departure location..."
+                    android:layout_weight="0.85"
+                    android:visibility="visible"/>
+
+                <LinearLayout android:id="@+id/llEnterCoordinates"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_weight="0.85"
+                    android:visibility="gone"
+                    android:weightSum="1">
+
+                    <EditText android:id="@+id/etEnterLatitude"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:hint="Latitude"
+                        android:layout_weight="0.45"/>
+
+                    <EditText android:id="@+id/etEnterLongitude"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:hint="Longitude"
+                        android:layout_weight="0.45"/>
+
+                </LinearLayout>
+
+                <Button android:id="@+id/btnSwitch"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text=">>"
+                    android:layout_weight="0.12"
+                    android:background="#00ffffff"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="26sp"/>
+
+            </LinearLayout>
+
+
+            <Button android:id="@+id/btnFind"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:text="Find"
+                android:textColor="@color/colorAccent"
+                android:textAllCaps="false"
+                android:textSize="26sp"
+                android:background="@drawable/background_rounded"
+                android:layout_margin="5dp"/>
+        </LinearLayout>
+
+        <LinearLayout android:id="@+id/llContent"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.75"
+            android:weightSum="1"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.17"
+                android:paddingRight="10dp"
+                android:paddingLeft="10dp"
+                >
+
+                <ImageView android:id="@+id/imageHighClouds"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitEnd"/>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center_vertical">
+
+                    <TextView android:id="@+id/tvHighClouds"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/high_clouds"
+                        android:textSize="20dp"
+                        android:textColor="#ffffff"/>
+
+                    <TextView android:id="@+id/tvHighCloudsValue"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="-"
+                        android:textSize="20dp"
+                        android:textColor="#ffffff"/>
+
+                </LinearLayout>
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.17"
+                android:paddingRight="10dp"
+                android:paddingLeft="10dp">
+
+
+                <ImageView android:id="@+id/ivMediumClouds"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitEnd"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center_vertical">
+
+                    <TextView android:id="@+id/tvMediumClouds"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/medium_clouds"
+                        android:textSize="20dp"
+                        android:textColor="#ffffff"/>
+
+                    <TextView android:id="@+id/tvMediumCloudsValue"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="-"
+                        android:textSize="20dp"
+                        android:textColor="#ffffff"/>
+
+                </LinearLayout>
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.17"
+                android:paddingRight="10dp"
+                android:paddingLeft="10dp">
+
+
+                <ImageView android:id="@+id/ivLowClouds"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitEnd"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center_vertical">
+
+                    <TextView android:id="@+id/tvLowClouds"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/low_clouds"
+                        android:textSize="20dp"
+                        android:textColor="#ffffff"/>
+
+                    <TextView android:id="@+id/tvLowCloudsValue"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="-"
+                        android:textSize="20dp"
+                        android:textColor="#ffffff"/>
+
+                </LinearLayout>
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.17"
+                android:paddingRight="10dp"
+                android:paddingLeft="10dp">
+
+
+                <ImageView android:id="@+id/ivFog"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitEnd"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center_vertical">
+
+                    <TextView android:id="@+id/tvFog"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/fog"
+                        android:textSize="20dp"
+                        android:textColor="#ffffff"/>
+
+                    <TextView android:id="@+id/tvFogValue"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="-"
+                        android:textSize="20dp"
+                        android:textColor="#ffffff"/>
+
+                </LinearLayout>
+
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.26"
+                android:gravity="center_vertical"
+                android:orientation="vertical"
+                android:paddingLeft="10dp">
+
+                <View
+                    android:layout_width="300dp"
+                    android:layout_height="1dp"
+                    android:background="#ffffff"
+                    android:layout_marginBottom="10dp"></View>
+
+                <TextView android:id="@+id/tvDewPoint"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Dew point: "
+                    android:textSize="22sp"
+                    android:textColor="#ffffff"/>
+
+                <TextView android:id="@+id/tvHumidity"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Humidity: "
+                    android:textSize="22sp"
+                    android:textColor="#ffffff"/>
+
+                <TextView android:id="@+id/tvTemperature"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Temperature: "
+                    android:textSize="22sp"
+                    android:textColor="#ffffff"/>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</FrameLayout>
